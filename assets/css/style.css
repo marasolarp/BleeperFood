@@ -1,0 +1,43 @@
+/*#s-search{
+	background-image: url(../img/tea-still-life-pistachios-pasta-1014500-wallhere.com.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+  	
+  	width: 100%;
+  	height:auto;
+}*/
+
+.parallax-container {
+    height: "50em";
+    opacity: 0.7;
+}
+
+.up-one {
+    position: relative;
+    z-index: 3;
+    top: -18em;
+    left: 18em;
+}
+#search{
+    color: black;
+}
+
+#title-search {
+    position: relative;
+    z-index: 3;
+    top: 1em;
+    font-size: larger;
+    color: black;
+}
+
+.up-two {
+    position: relative;
+    z-index: 3;
+    top: -17.5em;
+    left: 19em;
+}
+
+#card-insert {
+    background-color: lemonchiffon;
+}
+
