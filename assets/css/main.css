@@ -1,30 +1,52 @@
-.margin-not{
-	margin:0;
+header{
+	background-image: url("../img/hamb.jpg");
+	background-attachment: fixed;
+	width: 100%;
+	height: 30em;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	opacity:0.7;
 }
-
-
-
-.parallax-container {
-	height: "100%";
-	opacity: 0.7;
+.fix-margin{
+	margin-bottom: 0;
 }
-
-.up-one {
-	position: relative;
-	z-index: 3;
-	top: -18em;
-	margin: 0;
-	padding: 0;
-}
-
 #search {
-	color: black;
+	background-color: #fff;
 }
+.insert{
+	/*background-image: url("../img/fondo2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background-color: #F8F8FF;
+}
+#card-insert{
+	margin-top: 3em;
+}
+h1{
+	color: #B6008D;
+	font-family: 'Carter One',
+	cursive;
+}
+.box-text{
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 0.5em;
+}
+#btn-search{
+	margin: 1em;
+	background-color: #B6008D;
+}
+.zoom {
+	transition: all .2s ease-in-out;
+}
+.transition {
+	
+}
+img.zoom:hover {
+	opacity: 0.5;
+	transform: scale(1.2);
+}
+.card-reveal{
+	background-color: #c21d9b;
 
-#title-search {
-	position: relative;
-	z-index: 3;
-	top: 1em;
-	font-size: larger;
-	color: black;
 }

@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
   $('.parallax').parallax();
+  $('.zoom').hover(function () {
+    $(this).addClass('transition');
+  }, function () {
+    $(this).removeClass('transition');
+  });
 });  
 
 
@@ -28,36 +33,40 @@ $('#btn-search').click(function() {
         var ratingText = data.restaurants[i].restaurant.user_rating.rating_text;
 
         // Validación para los delivery y reservación
+        var nd = '';
         if (reservation === 0) {
-          // No tiene para reservar 
+          nd = ('No Disponible');
         } else {
-          // Tiene reservación 
+          varDisponible; 
+          nd = ('Disponible');
         }
+        var deli = '';
         if (deliveryOnline === 0) {
-          // No tiene delivery 
+          deli = ('No disponible');
         } else {
-          // Tiene 
+          deli = ('Disponible');
         }
+        
         // Acá pueden ir los append
-        $('#card-insert').append('<div class="card">' +
+        $('#card-insert').append('<div class="col s12 m4 l4 lg4">'+
+          '<div class="card">' +
           '<div class="card-image waves-effect waves-block waves-light">' +
-          '<img class="activator" src="' + image  + '">' +
+          '<img class="activator zoom" src="' + image + '">' +
           '</div>' +
           '<div class="card-content">' +
           '<span class="card-title activator grey-text text-darken-4">' + name + '<i class="material-icons right">more_vert</i></span>' +
           '<p>' + cuisines + '</p>' + '</div>' +
-          '<div class="card-reveal">' +
+          '<div class="card-reveal  purple lighten-5">' +
           '<span class="card-title grey-text text-darken-4">' + name + '<i class="material-icons right"> close</i></span>' +
           '<ul>' +
-          '<li>Dirección:' + address + '</li>' +
-          '<li>Reserva:' + reservation + '</li>' +
-          '<li>Delivery:' + deliveryOnline + '</li>' +
-          '<li>Raiting:' + rating + '</li>' +
-          '<li>Votos:' + votes + '</li>' +
-          '<li>Comentarios:' + ratingText + '</li>' +
-          '</ul></div></div>')
+          '<li>Dirección: ' + address + '</li>' +
+          '<li>Reserva: ' + nd + '</li>' +
+          '<li>Delivery: ' + deli + '</li>' +
+          '<li>Raiting: ' + rating + '</li>' +
+          '<li>Votos: ' + votes + '</li>' +
+          '<li>Comentarios: ' + ratingText + '</li>' +
+          '</ul></div></div></div>');
       }
     }
   });
-  
 });
