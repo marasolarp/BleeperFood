@@ -8,11 +8,26 @@
 }*/
 .parallax-container {
       height: "your height here";
+      opacity: 0.7;
     }
 #search{
 	position: relative;
-  	border: 0.7em solid #fff;
+  	border: 0.2em solid #fff;
   	z-index: 3;
- 	top: -20em;
- 	left: 5em;
-}    
+ 	top: -18em;
+    left: 18em;
+}   
+#title-search{
+	position: relative;
+    z-index: 3;
+    top: -23em;
+    left: 18em;
+    font-size: larger;
+    color: black;
+} 
+#btn-search{
+	position: relative;
+  	 z-index: 3;
+    top: -17.5em;
+    left: 19em;
+}
