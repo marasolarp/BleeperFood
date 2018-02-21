@@ -11,6 +11,9 @@ $(document).ready(function() {
 
 $('#btn-search').click(function() {
   var inputSearch = $('#search').val();
+  $('#search').val('');
+  $('#search').empty();
+  $('#card-insert').empty();
   $.ajax({
     type: 'GET',
     url: 'https://developers.zomato.com/api/v2.1/search?q=' + inputSearch,
@@ -48,6 +51,7 @@ $('#btn-search').click(function() {
         }
         
         // Acá pueden ir los append
+        $('#card-insert').empty;
         $('#card-insert').append('<div class="col s12 m4 l4 lg4">'+
           '<div class="card">' +
           '<div class="card-image waves-effect waves-block waves-light">' +
@@ -66,6 +70,7 @@ $('#btn-search').click(function() {
           '<li>Votos: ' + votes + '</li>' +
           '<li>Comentarios: ' + ratingText + '</li>' +
           '</ul></div></div></div>');
+        
       }
     }
   });
